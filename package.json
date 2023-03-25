@@ -1,0 +1,22 @@
+{
+  "name": "portfolio__publisher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happy-hee/Portfolio__publisher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happy-hee/Portfolio__publisher/issues"
+  },
+  "homepage": "https://github.com/happy-hee/Portfolio__publisher#readme",
+  "dependencies": {
+    "pageable": "^0.6.8"
+  }
+}
