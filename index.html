@@ -5,39 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Happy's Portfolio</title>
+    <title>김다희 | 웹 퍼블리셔 포트폴리오</title>
   </head>
   <body>
-    <!-- 네비게이션 -->
-    <nav>
-      <ul>
-        <li>
-          <a href="#page-1">1</a>
-        </li>
-        <li>
-          <a href="#page-2">2</a>
-        </li>
-        <li>
-          <a href="#page-3">3</a>
-        </li>
-        <li>
-          <a href="#page-4">4</a>
-        </li>
-        <li>
-          <a href="#page-5">5</a>
-        </li>
-        <li>
-          <a href="#page-6">6</a>
-        </li>
-      </ul>
-    </nav>
+    <!-- 헤더 -->
+    <header class="header">
+      <div class="content">
+        <!-- 로고 -->
+        <h1 class="logo">Happy :)</h1>
+        <!-- 네비게이션 -->
+        <nav class="gnb anchors">
+          <ul class="gnb__list">
+            <li class="gnb__item active">
+              <a href="#page-1">MAIN</a>
+            </li>
+            <li class="gnb__item">
+              <a href="#page-2">ABOUT</a>
+            </li>
+            <li class="gnb__item">
+              <a href="#page-3">PORTFOLIO</a>
+            </li>
+            <li class="gnb__item">
+              <a href="#page-4">LINK</a>
+            </li>
+            <li class="gnb__item">
+              <a href="#page-5">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div id="container">
-      <div data-anchor="Page 1">Page 1</div>
-      <div data-anchor="Page 2">Page 2</div>
-      <div data-anchor="Page 3">Page 3</div>
-      <div data-anchor="Page 4">Page 4</div>
-      <div data-anchor="Page 5">Page 5</div>
-      <div data-anchor="Page 6">Page 6</div>
+      <!-- 메인 비주얼 -->
+      <section data-anchor="Page 1" class="main-visual">
+        <div class="content">
+          <p class="main-visual__title">
+            안녕하세요! <br />
+            하루하루 발전해 나가는게 즐거운 <br />
+            웹퍼블리셔 김다희 입니다. :)
+          </p>
+          <span class="main-visual__deco deco-1"></span>
+          <span class="main-visual__deco deco-2"></span>
+          <span class="main-visual__deco deco-3"></span>
+        </div>
+      </section>
+      <section data-anchor="Page 2">Page 2</section>
+      <section data-anchor="Page 3">Page 3</section>
+      <section data-anchor="Page 4">Page 4</div>
+      <section data-anchor="Page 5">Page 5</div>
+      <section data-anchor="Page 6">Page 6</section>
     </div>
 
     <!-- 풀페이지(Pageable) 스크립트 -->

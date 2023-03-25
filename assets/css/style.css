@@ -1,3 +1,9 @@
+@charset "UTF-8";
+/* 폰트 */
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
+/* Color */
 * {
   letter-spacing: normal;
   box-sizing: border-box;
@@ -11,6 +17,7 @@ html {
 }
 
 body {
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.285;
@@ -58,4 +65,169 @@ svg {
 button {
   border: 0;
   background-color: transparent;
+}
+
+/* 공통스타일
+========================================================================== */
+.logo {
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border: 3px solid #fff;
+  border-radius: 0.6rem;
+  line-height: normal;
+  font-family: "NanumSquare", sans-serif;
+  font-size: 2rem;
+}
+
+.content {
+  position: relative;
+  max-width: 120rem;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.pg-wrapper,
+.pg-container,
+.pg-page {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* 헤더
+========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.header .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.gnb__list {
+  display: flex;
+}
+.gnb__item a {
+  position: relative;
+  display: inline-block;
+  padding: 1.6rem 3rem;
+  color: #fff;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.6rem;
+}
+.gnb__item.active ::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: #fff;
+}
+
+/* 메인 비주얼
+========================================================================== */
+.main-visual {
+  position: relative;
+  color: #fff;
+  background-color: #1e7ce1;
+  overflow: hidden;
+}
+.main-visual__title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
+  line-height: 2;
+  font-family: "NanumSquare", sans-serif;
+  font-size: 7.2rem;
+  font-weight: 600;
+  animation: titleFadeInUp 1s ease-in-out;
+}
+.main-visual__deco {
+  display: inline-block;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  opacity: 0.1;
+  position: absolute;
+}
+.main-visual__deco.deco-1 {
+  left: -425px;
+  top: -500px;
+  animation: deco1 6s linear infinite;
+}
+.main-visual__deco.deco-2 {
+  right: -25px;
+  bottom: -500px;
+  animation: deco2 6s linear infinite;
+}
+.main-visual__deco.deco-3 {
+  right: -400px;
+  bottom: -300px;
+  animation: deco3 7s linear infinite;
+}
+
+/* 애니메이션 효과
+========================================================================== */
+@keyframes titleFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+@keyframes deco1 {
+  0% {
+    left: -425px;
+    top: -500px;
+  }
+  50% {
+    left: -500px;
+    top: -450px;
+  }
+  100% {
+    left: -425px;
+    top: -500px;
+  }
+}
+@keyframes deco2 {
+  0% {
+    right: -25px;
+    bottom: -500px;
+  }
+  50% {
+    right: -100px;
+    bottom: -450px;
+  }
+  100% {
+    right: -25px;
+    bottom: -500px;
+  }
+}
+@keyframes deco3 {
+  0% {
+    right: -400px;
+    bottom: -300px;
+  }
+  50% {
+    right: -450px;
+    bottom: -400px;
+  }
+  100% {
+    right: -400px;
+    bottom: -300px;
+  }
 }
