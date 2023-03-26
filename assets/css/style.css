@@ -395,16 +395,16 @@ nav ul li a span {
   background-position: center;
 }
 .link__img--cosmetic {
-  background-image: url(/assets/images/cosmetic_logo.png);
+  background-image: url("/assets/images/cosmetic_logo.png");
   background-size: 70%;
   background-color: #1d7ce1;
 }
 .link__img--blog {
-  background-image: url(/assets/images/icon_tstory.png);
+  background-image: url("/assets/images/icon_tstory.png");
   background-color: #ef591b;
 }
 .link__img--github {
-  background-image: url(/assets/images/icon_github.png);
+  background-image: url("/assets/images/icon_github.png");
   background-color: #201f27;
 }
 
