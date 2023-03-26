@@ -107,6 +107,31 @@ button {
   padding: 0 !important;
 }
 
+.deco {
+  display: inline-block;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  opacity: 0.1;
+  position: absolute;
+  &.deco-1 {
+    left: -425px;
+    top: -500px;
+    animation: deco1 6s linear infinite;
+  }
+  &.deco-2 {
+    right: -25px;
+    bottom: -500px;
+    animation: deco2 6s linear infinite;
+  }
+  &.deco-3 {
+    right: -400px;
+    bottom: -300px;
+    animation: deco3 7s linear infinite;
+  }
+}
+
 /* 네비게이션
 ========================================================================== */
 nav {
@@ -186,30 +211,6 @@ nav {
     font-weight: 600;
     animation: titleFadeInUp 1s ease-in-out;
   }
-  &__deco {
-    display: inline-block;
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    background-color: #e4e4e4;
-    opacity: 0.1;
-    position: absolute;
-    &.deco-1 {
-      left: -425px;
-      top: -500px;
-      animation: deco1 6s linear infinite;
-    }
-    &.deco-2 {
-      right: -25px;
-      bottom: -500px;
-      animation: deco2 6s linear infinite;
-    }
-    &.deco-3 {
-      right: -400px;
-      bottom: -300px;
-      animation: deco3 7s linear infinite;
-    }
-  }
 }
 
 /* About
@@ -273,7 +274,7 @@ nav {
 /* Portfolio
 ========================================================================== */
 .portfolio {
-  background-color: #fff;
+  background-color: #f7f7f7;
   &__content {
     padding: 6rem 0;
     display: flex;
@@ -391,6 +392,7 @@ nav {
 /* HOW TO WORK
 ========================================================================== */
 .how-work {
+  background-color: #f7f7f7;
   &__content {
     margin: 5rem 0;
   }
@@ -405,6 +407,20 @@ nav {
       margin-right: 1rem;
       color: $point-color;
     }
+  }
+}
+
+/* CONTACT
+========================================================================== */
+.contact {
+  background-color: $point-color;
+  color: #fff;
+  overflow: hidden;
+  &__text {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 5rem;
+    font-weight: 400;
   }
 }
 

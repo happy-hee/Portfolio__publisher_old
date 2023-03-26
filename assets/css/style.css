@@ -114,6 +114,31 @@ button {
   padding: 0 !important;
 }
 
+.deco {
+  display: inline-block;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: #e4e4e4;
+  opacity: 0.1;
+  position: absolute;
+}
+.deco.deco-1 {
+  left: -425px;
+  top: -500px;
+  animation: deco1 6s linear infinite;
+}
+.deco.deco-2 {
+  right: -25px;
+  bottom: -500px;
+  animation: deco2 6s linear infinite;
+}
+.deco.deco-3 {
+  right: -400px;
+  bottom: -300px;
+  animation: deco3 7s linear infinite;
+}
+
 /* 네비게이션
 ========================================================================== */
 nav {
@@ -192,30 +217,6 @@ nav ul li a span {
   font-weight: 600;
   animation: titleFadeInUp 1s ease-in-out;
 }
-.main-visual__deco {
-  display: inline-block;
-  width: 800px;
-  height: 800px;
-  border-radius: 50%;
-  background-color: #e4e4e4;
-  opacity: 0.1;
-  position: absolute;
-}
-.main-visual__deco.deco-1 {
-  left: -425px;
-  top: -500px;
-  animation: deco1 6s linear infinite;
-}
-.main-visual__deco.deco-2 {
-  right: -25px;
-  bottom: -500px;
-  animation: deco2 6s linear infinite;
-}
-.main-visual__deco.deco-3 {
-  right: -400px;
-  bottom: -300px;
-  animation: deco3 7s linear infinite;
-}
 
 /* About
 ========================================================================== */
@@ -274,7 +275,7 @@ nav ul li a span {
 /* Portfolio
 ========================================================================== */
 .portfolio {
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 .portfolio__content {
   padding: 6rem 0;
@@ -409,6 +410,9 @@ nav ul li a span {
 
 /* HOW TO WORK
 ========================================================================== */
+.how-work {
+  background-color: #f7f7f7;
+}
 .how-work__content {
   margin: 5rem 0;
 }
@@ -423,6 +427,20 @@ nav ul li a span {
 .how-work__list-item--point {
   margin-right: 1rem;
   color: #1e7ce1;
+}
+
+/* CONTACT
+========================================================================== */
+.contact {
+  background-color: #1e7ce1;
+  color: #fff;
+  overflow: hidden;
+}
+.contact__text {
+  text-align: center;
+  font-size: 6rem;
+  margin-top: 5rem;
+  font-weight: 400;
 }
 
 /* 애니메이션 효과
