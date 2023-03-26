@@ -2,7 +2,7 @@
 /* 폰트 */
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&display=swap");
 /* Color */
 * {
   letter-spacing: normal;
@@ -50,6 +50,7 @@ ul,
 ol,
 li {
   list-style: none;
+  overflow: hidden;
 }
 
 a {
@@ -84,7 +85,14 @@ button {
   max-width: 120rem;
   margin: 0 auto;
   height: 100%;
-  padding: 0 2rem;
+  padding: 10rem 2rem;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .pg-wrapper,
@@ -102,12 +110,16 @@ button {
   left: 0;
   width: 100%;
   z-index: 999;
+  background: #1e7ce1;
 }
-.header .content {
+.header__content {
+  position: relative;
+  max-width: 120rem;
+  padding: 0 2rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
 }
 
 .gnb__list {
@@ -133,7 +145,7 @@ button {
   background: #fff;
 }
 
-/* 메인 비주얼
+/* MAIN
 ========================================================================== */
 .main-visual {
   position: relative;
@@ -175,6 +187,70 @@ button {
   right: -400px;
   bottom: -300px;
   animation: deco3 7s linear infinite;
+}
+
+/* About
+========================================================================== */
+.about__intro {
+  display: flex;
+  margin-bottom: 7rem;
+  padding-left: 3rem;
+  border-left: 6px solid #1e7ce1;
+}
+.about__image {
+  display: inline-block;
+  width: 16rem;
+  height: 16rem;
+  margin-right: 3.4rem;
+}
+.about__title {
+  line-height: 1.8;
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+.about__title--point {
+  color: #1e7ce1;
+}
+.about__content {
+  display: flex;
+}
+.about__content .skill {
+  width: 50%;
+}
+.about__content .skill__content {
+  margin-bottom: 3rem;
+}
+.about__content .skill__title {
+  position: relative;
+  margin-bottom: 3rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 2.7rem;
+}
+.about__content .skill__title::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 13px;
+  background-color: rgba(30, 124, 225, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: -5px;
+}
+.about__content .skill__sub-title {
+  margin-bottom: 1rem;
+  line-height: normal;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.about__content .skill__sub-title--date {
+  font-size: 1.4rem;
+  color: #b4b4b4;
+  margin-left: 0.4rem;
+  font-weight: 300;
+}
+.about__content .skill-list__item {
+  margin-bottom: 2rem;
+  line-height: 2;
 }
 
 /* 애니메이션 효과
