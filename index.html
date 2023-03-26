@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>김다희 | 웹퍼블리셔 포트폴리오</title>
   </head>
@@ -54,9 +58,9 @@
         <div class="content">
           <div class="inner">
             <div class="about__intro">
-              <h2 class="about__title">
+              <h2 class="section__title">
                 반갑습니다! '함께'하는 미래를 꿈꾸는<br />
-                <span class="about__title--point">웹퍼블리셔 김다희</span>
+                <span class="section__title--point">웹퍼블리셔 김다희</span>
                 입니다. <span>👋</span>
               </h2>
             </div>
@@ -116,13 +120,80 @@
           </div>
         </div>
       </section>
-      <section data-anchor="Page 3">Page 3</section>
+
+      <!-- PORTFOLIO -->
+      <section data-anchor="Page 3" class="portfolio">
+        <div class="content">
+          <div class="inner">
+            <h2 class="section__title">저의 최근 작업물을 살펴보세요!</h2>
+            <div class="portfolio__content">
+              <img
+                class="portfolio__img"
+                src="./assets/images/spavel.png"
+                alt="SPAVEL" />
+              <div class="portfolio__text">
+                <div class="portfolio__device">[RESPONSIVE WEBSITE]</div>
+                <div class="portfolio__name">SPAVEL</div>
+                <div class="portfolio__info">
+                  <span>사용기술 : </span>
+                  <a
+                    class="portfolio__info--link"
+                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/index.html"
+                    target="_blank"
+                    >HTML</a
+                  >
+                  <a
+                    class="portfolio__info--link"
+                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/assets/scss/style.scss"
+                    target="_blank"
+                    >SCSS</a
+                  >
+                  <a
+                    class="portfolio__info--link"
+                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/js/script_js.js"
+                    target="_blank"
+                    >Javascript</a
+                  >
+                  <a
+                    class="portfolio__info--link"
+                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/js/script_jquery.js"
+                    target="_blank"
+                    >jQuery</a
+                  >
+                </div>
+                <div class="portfolio__info">
+                  기여도 : 퍼블리싱 및 디자인 100%
+                </div>
+                <div class="portfolio__info">
+                  사용 플러그인 : Swiper / Date picker / AOS
+                </div>
+                <div class="portfolio__btn-wrap">
+                  <a
+                    class="portfolio__btn"
+                    href="https://mica-arch-602.notion.site/SPAVEL-1f984ada945b495d9003913965c60df4"
+                    target="_blank"
+                    >자세히보기</a
+                  >
+                  <a
+                    class="portfolio__btn portfolio__btn--point"
+                    href="https://happy-hee.github.io/Portfolio__Spavel/"
+                    target="_blank">
+                    사이트 보러가기
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section data-anchor="Page 4">Page 4</section>
       <section data-anchor="Page 5">Page 5</section>
     </div>
 
     <!-- 풀페이지(Pageable) 스크립트 -->
     <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <!-- Swiper 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

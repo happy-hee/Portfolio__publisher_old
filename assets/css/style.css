@@ -4,6 +4,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&display=swap");
 /* Color */
+/* Button */
 * {
   letter-spacing: normal;
   box-sizing: border-box;
@@ -80,12 +81,23 @@ button {
   font-size: 2rem;
 }
 
+.section__title {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-size: 6rem;
+  font-weight: 400;
+  text-align: center;
+}
+.section__title--point {
+  color: #1e7ce1;
+}
+
 .content {
   position: relative;
-  max-width: 120rem;
+  max-width: 160rem;
   margin: 0 auto;
   height: 100%;
-  padding: 10rem 2rem;
+  padding: 10rem 0;
 }
 
 .inner {
@@ -93,6 +105,7 @@ button {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  padding: 0 6rem;
 }
 
 .pg-wrapper,
@@ -114,8 +127,8 @@ button {
 }
 .header__content {
   position: relative;
-  max-width: 120rem;
-  padding: 0 2rem;
+  max-width: 160rem;
+  padding: 0 6rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -157,7 +170,7 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 2rem;
+  left: 6rem;
   line-height: 2;
   font-family: "NanumSquare", sans-serif;
   font-size: 7.2rem;
@@ -197,13 +210,9 @@ button {
   padding-left: 5rem;
   border-left: 6px solid #1e7ce1;
 }
-.about__title {
-  line-height: 1.8;
-  font-size: 4.5rem;
-  font-weight: 400;
-}
-.about__title--point {
-  color: #1e7ce1;
+.about__intro .section__title {
+  margin-bottom: 0;
+  text-align: left;
 }
 .about__content {
   display: flex;
@@ -245,6 +254,90 @@ button {
 .about__content .skill-list__item {
   margin-bottom: 2rem;
   line-height: 2;
+}
+
+/* Portfolio
+========================================================================== */
+.portfolio {
+  background-color: #f9f9f9;
+}
+.portfolio__content {
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.portfolio__img {
+  width: 60%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.portfolio__text {
+  width: 40%;
+  text-align: left;
+  padding-left: 2rem;
+}
+.portfolio__name {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.portfolio__info {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.portfolio__info--link {
+  padding: 0.4rem 1rem;
+  margin: 0 0.2rem;
+  background-color: rgba(19, 126, 241, 0.0588235294);
+  color: #1e7ce1;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.portfolio__device {
+  color: #b2b2b2;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.portfolio__btn-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+}
+.portfolio__btn {
+  margin-right: 2rem;
+  display: inline-block;
+  width: 23rem;
+  height: 5.2rem;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  border: 1px solid #1e7ce1;
+  color: #1e7ce1;
+  background-color: #fff;
+}
+.portfolio__btn:hover {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+}
+.portfolio__btn:hover {
+  box-shadow: inset 0 0 0px 2px #1e7ce1;
+}
+.portfolio__btn--point {
+  border: 1px solid #1e7ce1;
+  background-color: #1e7ce1;
+  color: #fff;
+}
+.portfolio__btn--point:hover {
+  background-color: #0066d3;
+  border-color: #0066d3;
+  box-shadow: none;
 }
 
 /* 애니메이션 효과

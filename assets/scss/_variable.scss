@@ -8,3 +8,40 @@ $font-content: "Noto Sans KR", sans-serif;
 
 /* Color */
 $point-color: #1e7ce1;
+
+/* Button */
+@mixin btn-default {
+  display: inline-block;
+  width: 23rem;
+  height: 5.2rem;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  &:hover {
+    transition-property: all;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+}
+@mixin btn-white-point {
+  border: 1px solid $point-color;
+  color: $point-color;
+  background-color: #fff;
+}
+@mixin btn-white-point-hover {
+  box-shadow: inset 0 0 0px 2px $point-color;
+}
+@mixin btn-point {
+  border: 1px solid $point-color;
+  background-color: $point-color;
+  color: #fff;
+}
+@mixin btn-point-hover {
+  background-color: #0066d3;
+  border-color: #0066d3;
+  box-shadow: none;
+}

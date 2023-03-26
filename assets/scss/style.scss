@@ -75,18 +75,31 @@ button {
   font-family: "NanumSquare", sans-serif;
   font-size: 2rem;
 }
+.section {
+  &__title {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: 6rem;
+    font-weight: 400;
+    text-align: center;
+    &--point {
+      color: $point-color;
+    }
+  }
+}
 .content {
   position: relative;
-  max-width: 120rem;
+  max-width: 160rem;
   margin: 0 auto;
   height: 100%;
-  padding: 10rem 2rem;
+  padding: 10rem 0;
 }
 .inner {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  padding: 0 6rem;
 }
 .pg-wrapper,
 .pg-container,
@@ -106,8 +119,8 @@ button {
   background: $point-color;
   &__content {
     position: relative;
-    max-width: 120rem;
-    padding: 0 2rem;
+    max-width: 160rem;
+    padding: 0 6rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -152,7 +165,7 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 2rem;
+    left: 6rem;
     line-height: 2;
     font-family: $font-title;
     font-size: 7.2rem;
@@ -193,13 +206,9 @@ button {
     margin-bottom: 7rem;
     padding-left: 5rem;
     border-left: 6px solid $point-color;
-  }
-  &__title {
-    line-height: 1.8;
-    font-size: 4.5rem;
-    font-weight: 400;
-    &--point {
-      color: $point-color;
+    .section__title {
+      margin-bottom: 0;
+      text-align: left;
     }
   }
   &__content {
@@ -242,6 +251,70 @@ button {
       &__item {
         margin-bottom: 2rem;
         line-height: 2;
+      }
+    }
+  }
+}
+
+/* Portfolio
+========================================================================== */
+.portfolio {
+  background-color: #f9f9f9;
+  &__content {
+    padding: 6rem 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  &__img {
+    width: 60%;
+    max-width: 90rem;
+    margin: 0 auto;
+  }
+  &__text {
+    width: 40%;
+    text-align: left;
+    padding-left: 2rem;
+  }
+  &__name {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+  &__info {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    &--link {
+      padding: 0.4rem 1rem;
+      margin: 0 0.2rem;
+      background-color: #137ef10f;
+      color: #1e7ce1;
+      border-radius: 0.5rem;
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+  }
+  &__device {
+    color: #b2b2b2;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+  }
+  &__btn {
+    margin-right: 2rem;
+    @include btn-default;
+    @include btn-white-point;
+    &:hover {
+      @include btn-white-point-hover;
+    }
+    &--point {
+      @include btn-point;
+      &:hover {
+        @include btn-point-hover;
       }
     }
   }
