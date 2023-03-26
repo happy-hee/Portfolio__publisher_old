@@ -407,6 +407,24 @@ nav ul li a span {
   background-color: #201f27;
 }
 
+/* HOW TO WORK
+========================================================================== */
+.how-work__content {
+  margin: 5rem 0;
+}
+.how-work__list {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.how-work__list-item {
+  padding: 3rem 1rem;
+  font-size: 2.4rem;
+}
+.how-work__list-item--point {
+  margin-right: 1rem;
+  color: #1e7ce1;
+}
+
 /* 애니메이션 효과
 ========================================================================== */
 @keyframes titleFadeInUp {
