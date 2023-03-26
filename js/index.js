@@ -4,9 +4,8 @@
  */
 const pages = new Pageable("#container", {
   pips: true,
+  animation: 450,
   events: {
     keydown: true, // enable / disable keyboard navigation
   },
 });
-
-document.querySelector("nav li a").setAttribute("tabindex", "0");
