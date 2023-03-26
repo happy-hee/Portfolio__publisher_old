@@ -12,33 +12,15 @@
     <title>김다희 | 웹퍼블리셔 포트폴리오</title>
   </head>
   <body>
-    <!-- 헤더 -->
-    <header class="header">
-      <div class="header__content">
-        <!-- 로고 -->
-        <h1 class="logo">Happy :)</h1>
-        <!-- 네비게이션 -->
-        <nav class="gnb anchors">
-          <ul class="gnb__list">
-            <li class="gnb__item active">
-              <a href="#page-1">MAIN</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#page-2">ABOUT</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#page-3">PORTFOLIO</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#page-4">LINK</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#page-5">CONTACT</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <!-- (웹접근성) Skip navigation -->
+    <div id="skipNav" tabindex="0">
+      <a href="#page-1">MAIN</a>
+      <a href="#page-2">ABOUT</a>
+      <a href="#page-3">PORTFOLIO</a>
+      <a href="#page-4">LINK</a>
+      <a href="#page-5">CONTACT</a>
+    </div>
+
     <div id="container">
       <!-- MAIN -->
       <section data-anchor="Page 1" class="main-visual">
@@ -53,6 +35,7 @@
           <span class="main-visual__deco deco-3"></span>
         </div>
       </section>
+
       <!-- ABOUT -->
       <section data-anchor="Page 2" class="about">
         <div class="content">

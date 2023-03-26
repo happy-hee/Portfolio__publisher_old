@@ -3,8 +3,10 @@
  * https://github.com/Mobius1/Pageable#browser
  */
 const pages = new Pageable("#container", {
-  pips: false,
+  pips: true,
   events: {
-    keydown: false, // enable / disable keyboard navigation
+    keydown: true, // enable / disable keyboard navigation
   },
 });
+
+document.querySelector("nav li a").setAttribute("tabindex", "0");
