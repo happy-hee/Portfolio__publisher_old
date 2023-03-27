@@ -78,7 +78,7 @@ button {
   &__title {
     margin-bottom: 2rem;
     line-height: 1.8;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 400;
     text-align: center;
     &--point {
@@ -91,7 +91,6 @@ button {
   max-width: 160rem;
   margin: 0 auto;
   height: 100%;
-  padding: 10rem 0;
 }
 .inner {
   position: absolute;
@@ -310,9 +309,10 @@ nav {
     }
   }
   &__device {
-    color: #b2b2b2;
     margin-bottom: 1rem;
     font-size: 1.8rem;
+    font-weight: 500;
+    color: $point-color;
   }
   &__btn-wrap {
     display: flex;
@@ -345,19 +345,24 @@ nav {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 0 -3rem;
   }
   &__list-item {
     flex: 1;
-    margin: 0 3rem;
-    border: 1px solid #ddd;
+    padding: 0 3rem;
     border-radius: 0.5rem;
     background-color: #fff;
-    overflow: hidden;
-    &:hover {
-      box-shadow: -1px 7px 14px 4px rgb(0 0 0 / 14%);
-      transition: all 0.15s ease-in-out;
-      .link__text--title {
-        text-decoration: underline;
+    a {
+      display: inline-block;
+      width: 100%;
+      border: 1px solid #ddd;
+      overflow: hidden;
+      &:hover {
+        box-shadow: -1px 7px 14px 4px rgb(0 0 0 / 14%);
+        transition: all 0.15s ease-in-out;
+        .link__text--title {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -403,6 +408,7 @@ nav {
   &__list-item {
     padding: 3rem 1rem;
     font-size: 2.4rem;
+    line-height: 1.8;
     &--point {
       margin-right: 1rem;
       color: $point-color;
@@ -419,7 +425,7 @@ nav {
   &__text {
     text-align: center;
     font-size: 6rem;
-    margin-top: 5rem;
+    margin-bottom: 2rem;
     font-weight: 400;
   }
 }
@@ -476,6 +482,124 @@ nav {
   100% {
     right: -400px;
     bottom: -300px;
+  }
+}
+
+/* 반응형
+========================================================================== */
+// Desctop
+@media screen and (max-width: 1280px) {
+  nav {
+    right: 0.2rem;
+  }
+  .main-visual {
+    &__title {
+      font-size: 4.5rem;
+    }
+  }
+  .about {
+    &__intro {
+      margin-bottom: 4rem;
+      display: block;
+      padding-left: 0;
+      border-left: 0;
+      .section__title {
+        font-size: 4.8rem;
+      }
+    }
+  }
+  .link {
+    &__content {
+      margin: 2rem 0;
+    }
+  }
+  .how-work {
+    &__content {
+      margin: 0;
+    }
+  }
+}
+
+// Large Tablet
+@media screen and (max-width: 1024px) {
+  .main-visual {
+    &__title {
+      left: 3rem;
+    }
+  }
+  .inner {
+    padding: 0 3rem;
+  }
+  .section {
+    &__title {
+      margin-bottom: 4rem;
+    }
+  }
+  .about {
+    &__intro {
+      .section__title {
+        margin-bottom: 6rem;
+        text-align: center;
+      }
+    }
+  }
+  .portfolio {
+    &__content {
+      flex-direction: column;
+      padding: 3rem 0 0 0;
+    }
+    &__img {
+      width: 100%;
+      max-width: 60rem;
+    }
+    &__text {
+      width: 100%;
+      padding: 2rem 0 0 0;
+      text-align: center;
+    }
+    &__btn-wrap {
+      margin-top: 5rem;
+      justify-content: center;
+    }
+  }
+  .link {
+    &__content {
+      margin: 4rem 0 0 0;
+    }
+    &__list {
+      margin: 0;
+    }
+    &__list-item {
+      flex: 0 0 50%;
+      padding: 1rem 1rem 3rem 1rem;
+    }
+  }
+  .how-work {
+    &__content {
+      margin: 5rem 0;
+    }
+  }
+}
+
+// Tablet
+@media screen and (max-width: 768px) {
+  .section {
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 4.5rem;
+    }
+  }
+  .about {
+    &__intro {
+      .section__title {
+        font-size: 4.5rem;
+      }
+    }
+  }
+  .contact {
+    &__text {
+      font-size: 4.5rem;
+    }
   }
 }
 
