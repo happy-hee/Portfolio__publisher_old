@@ -145,7 +145,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 100;
-  right: 5%;
+  right: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,11 +156,6 @@ nav ul li {
   height: 24px;
   margin: 7px;
   position: relative;
-}
-nav ul li:hover a span {
-  height: 16px;
-  width: 16px;
-  margin: -10px 0 0 -10px;
 }
 nav ul li a {
   display: block;
@@ -200,6 +195,7 @@ nav ul li a span {
 /* MAIN
 ========================================================================== */
 .main-visual {
+  height: 100vh;
   position: relative;
   color: #fff;
   background-color: #1e7ce1;
@@ -214,7 +210,6 @@ nav ul li a span {
   font-family: "NanumSquare", sans-serif;
   font-size: 7.2rem;
   font-weight: 600;
-  animation: titleFadeInUp 1s ease-in-out;
 }
 
 /* About
@@ -342,18 +337,10 @@ nav ul li a span {
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
 }
-.portfolio__btn:hover {
-  box-shadow: inset 0 0 0px 2px #1e7ce1;
-}
 .portfolio__btn--point {
   border: 1px solid #1e7ce1;
   background-color: #1e7ce1;
   color: #fff;
-}
-.portfolio__btn--point:hover {
-  background-color: #0066d3;
-  border-color: #0066d3;
-  box-shadow: none;
 }
 
 /* Link
@@ -378,13 +365,6 @@ nav ul li a span {
   width: 100%;
   border: 1px solid #ddd;
   overflow: hidden;
-}
-.link__list-item a:hover {
-  box-shadow: -1px 7px 14px 4px rgba(0, 0, 0, 0.14);
-  transition: all 0.15s ease-in-out;
-}
-.link__list-item a:hover .link__text--title {
-  text-decoration: underline;
 }
 .link__text {
   padding: 3rem;
@@ -438,9 +418,18 @@ nav ul li a span {
 /* CONTACT
 ========================================================================== */
 .contact {
+  height: 100vh;
   background-color: #1e7ce1;
   color: #fff;
   overflow: hidden;
+}
+.contact__content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  line-height: 2;
 }
 .contact__text {
   text-align: center;
@@ -451,16 +440,6 @@ nav ul li a span {
 
 /* 애니메이션 효과
 ========================================================================== */
-@keyframes titleFadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(-10%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-}
 @keyframes deco1 {
   0% {
     left: -425px;
@@ -505,12 +484,37 @@ nav ul li a span {
 }
 /* 반응형
 ========================================================================== */
-@media screen and (max-width: 1280px) {
+@media (hover: hover) {
+  nav ul li:hover a span {
+    height: 16px;
+    width: 16px;
+    margin: -10px 0 0 -10px;
+  }
+  .portfolio__btn:hover {
+    box-shadow: inset 0 0 0px 2px #1e7ce1;
+  }
+  .portfolio__btn--point:hover {
+    background-color: #0066d3;
+    border-color: #0066d3;
+    box-shadow: none;
+  }
+  .link__list-item a:hover {
+    box-shadow: -1px 7px 14px 4px rgba(0, 0, 0, 0.14);
+    transition: all 0.15s ease-in-out;
+  }
+  .link__list-item a:hover .link__text--title {
+    text-decoration: underline;
+  }
+}
+@media (max-width: 1279px) {
   nav {
-    right: 0.2rem;
+    right: 1.2rem;
   }
   .main-visual__title {
     font-size: 4.5rem;
+  }
+  .section__title {
+    margin-bottom: 4rem;
   }
   .about__intro {
     margin-bottom: 4rem;
@@ -528,7 +532,10 @@ nav ul li a span {
     margin: 0;
   }
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 1023px) {
+  nav {
+    right: 0.6rem;
+  }
   .main-visual__title {
     left: 3rem;
   }
@@ -536,11 +543,12 @@ nav ul li a span {
     padding: 0 3rem;
   }
   .section__title {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
   }
   .about__intro .section__title {
+    font-size: 4.5rem;
     margin-bottom: 6rem;
-    text-align: center;
   }
   .portfolio__content {
     flex-direction: column;
@@ -573,16 +581,98 @@ nav ul li a span {
     margin: 5rem 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 767px) {
+  #container {
+    font-size: 1.4rem;
+  }
+  .inner {
+    padding: 0 2rem;
+  }
   .section__title {
-    margin-bottom: 2rem;
-    font-size: 4.5rem;
+    font-size: 3rem;
+  }
+  .main-visual__title {
+    left: 2rem;
+    right: 2rem;
+    font-size: 4rem;
   }
   .about__intro .section__title {
-    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .about__content {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .about__content .skill {
+    width: 100%;
+  }
+  .about__content .skill__title {
+    font-size: 2.4rem;
+  }
+  .about__content .skill__title::after {
+    left: 50%;
+    margin-left: -80px;
+  }
+  .about__content .skill__sub-title {
+    font-size: 1.8rem;
+  }
+  .portfolio__device {
+    font-size: 1.4rem;
+  }
+  .portfolio__name {
+    font-size: 2.8rem;
+  }
+  .portfolio__info {
+    font-size: 1.4rem;
+  }
+  .portfolio__info--link {
+    padding: 0.3rem 0.6rem;
+    margin: 0 0.1rem;
+    font-size: 1.3rem;
+  }
+  .portfolio__btn-wrap {
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  .portfolio__btn {
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+  .link__list-item {
+    flex: 0 0 100%;
+  }
+  .link__img {
+    height: 17rem;
+  }
+  .link__text {
+    padding: 1.4rem;
+  }
+  .link__text--title {
+    font-size: 1.6rem;
+  }
+  .how-work__list-item {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    word-break: break-all;
   }
   .contact__text {
     font-size: 4.5rem;
+  }
+}
+/* 터치 기기 & 모바일 사이즈 CSS
+========================================================================== */
+.not-pageable .inner {
+  position: relative;
+  top: 0;
+  transform: none;
+  padding: 12rem 3rem;
+}
+
+@media (max-width: 767px) {
+  .not-pageable .inner {
+    padding: 6rem 2rem;
   }
 }
 /* 웹접근성

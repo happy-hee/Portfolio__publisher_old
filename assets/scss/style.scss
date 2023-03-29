@@ -138,7 +138,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 100;
-  right: 5%;
+  right: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -149,11 +149,6 @@ nav {
       height: 24px;
       margin: 7px;
       position: relative;
-      &:hover a span {
-        height: 16px;
-        width: 16px;
-        margin: -10px 0 0 -10px;
-      }
       a {
         display: block;
         position: relative;
@@ -195,6 +190,7 @@ nav {
 /* MAIN
 ========================================================================== */
 .main-visual {
+  height: 100vh;
   position: relative;
   color: #fff;
   background-color: $point-color;
@@ -208,7 +204,6 @@ nav {
     font-family: $font-title;
     font-size: 7.2rem;
     font-weight: 600;
-    animation: titleFadeInUp 1s ease-in-out;
   }
 }
 
@@ -323,14 +318,8 @@ nav {
     margin-right: 2rem;
     @include btn-default;
     @include btn-white-point;
-    &:hover {
-      @include btn-white-point-hover;
-    }
     &--point {
       @include btn-point;
-      &:hover {
-        @include btn-point-hover;
-      }
     }
   }
 }
@@ -357,13 +346,6 @@ nav {
       width: 100%;
       border: 1px solid #ddd;
       overflow: hidden;
-      &:hover {
-        box-shadow: -1px 7px 14px 4px rgb(0 0 0 / 14%);
-        transition: all 0.15s ease-in-out;
-        .link__text--title {
-          text-decoration: underline;
-        }
-      }
     }
   }
   &__text {
@@ -419,9 +401,18 @@ nav {
 /* CONTACT
 ========================================================================== */
 .contact {
+  height: 100vh;
   background-color: $point-color;
   color: #fff;
   overflow: hidden;
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    line-height: 2;
+  }
   &__text {
     text-align: center;
     font-size: 6rem;
@@ -432,16 +423,6 @@ nav {
 
 /* 애니메이션 효과
 ========================================================================== */
-@keyframes titleFadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(-10%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-}
 @keyframes deco1 {
   0% {
     left: -425px;
@@ -487,14 +468,58 @@ nav {
 
 /* 반응형
 ========================================================================== */
-// Desctop
-@media screen and (max-width: 1280px) {
+@media (hover: hover) {
   nav {
-    right: 0.2rem;
+    ul {
+      li {
+        &:hover a span {
+          height: 16px;
+          width: 16px;
+          margin: -10px 0 0 -10px;
+        }
+      }
+    }
+  }
+  .portfolio {
+    &__btn {
+      &:hover {
+        @include btn-white-point-hover;
+      }
+      &--point {
+        &:hover {
+          @include btn-point-hover;
+        }
+      }
+    }
+  }
+  .link {
+    &__list-item {
+      a {
+        &:hover {
+          box-shadow: -1px 7px 14px 4px rgb(0 0 0 / 14%);
+          transition: all 0.15s ease-in-out;
+          .link__text--title {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desctop
+@media (max-width: 1279px) {
+  nav {
+    right: 1.2rem;
   }
   .main-visual {
     &__title {
       font-size: 4.5rem;
+    }
+  }
+  .section {
+    &__title {
+      margin-bottom: 4rem;
     }
   }
   .about {
@@ -520,8 +545,11 @@ nav {
   }
 }
 
-// Large Tablet
-@media screen and (max-width: 1024px) {
+// Tablet
+@media (max-width: 1023px) {
+  nav {
+    right: 0.6rem;
+  }
   .main-visual {
     &__title {
       left: 3rem;
@@ -532,14 +560,15 @@ nav {
   }
   .section {
     &__title {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
+      font-size: 4.5rem;
     }
   }
   .about {
     &__intro {
       .section__title {
+        font-size: 4.5rem;
         margin-bottom: 6rem;
-        text-align: center;
       }
     }
   }
@@ -581,25 +610,121 @@ nav {
   }
 }
 
-// Tablet
-@media screen and (max-width: 768px) {
+// Mobile
+@media (max-width: 767px) {
+  #container {
+    font-size: 1.4rem;
+  }
+  .inner {
+    padding: 0 2rem;
+  }
   .section {
     &__title {
-      margin-bottom: 2rem;
-      font-size: 4.5rem;
+      font-size: 3rem;
+    }
+  }
+  .main-visual {
+    &__title {
+      left: 2rem;
+      right: 2rem;
+      font-size: 4rem;
     }
   }
   .about {
     &__intro {
       .section__title {
-        font-size: 4.5rem;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        text-align: center;
+      }
+    }
+    &__content {
+      flex-wrap: wrap;
+      text-align: center;
+      .skill {
+        width: 100%;
+        &__title {
+          font-size: 2.4rem;
+          &::after {
+            left: 50%;
+            margin-left: -80px;
+          }
+        }
+        &__sub-title {
+          font-size: 1.8rem;
+        }
       }
     }
   }
+
+  .portfolio {
+    &__device {
+      font-size: 1.4rem;
+    }
+    &__name {
+      font-size: 2.8rem;
+    }
+    &__info {
+      font-size: 1.4rem;
+      &--link {
+        padding: 0.3rem 0.6rem;
+        margin: 0 0.1rem;
+        font-size: 1.3rem;
+      }
+    }
+    &__btn-wrap {
+      margin-top: 4rem;
+      flex-wrap: wrap;
+    }
+    &__btn {
+      width: 100%;
+      margin: 1rem 0 0 0;
+    }
+  }
+
+  .link {
+    &__list-item {
+      flex: 0 0 100%;
+    }
+    &__img {
+      height: 17rem;
+    }
+    &__text {
+      padding: 1.4rem;
+      &--title {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .how-work {
+    &__list-item {
+      font-size: 1.8rem;
+      padding: 2rem 0;
+      word-break: break-all;
+    }
+  }
+
   .contact {
     &__text {
       font-size: 4.5rem;
     }
+  }
+}
+
+/* 터치 기기 & 모바일 사이즈 CSS
+========================================================================== */
+.not-pageable {
+  .inner {
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 12rem 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .not-pageable .inner {
+    padding: 6rem 2rem;
   }
 }
 
