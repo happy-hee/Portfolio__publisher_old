@@ -681,6 +681,13 @@ nav ul li a span {
   transform: none;
   padding: 12rem 3rem;
 }
+.not-pageable [data-aos=fade-in-aos] {
+  opacity: 0;
+}
+.not-pageable [data-aos=fade-in-aos].aos-animate {
+  opacity: 1;
+  animation: fadeIn 0.7s ease-in-out;
+}
 
 @media (max-width: 767px) {
   .not-pageable .inner {

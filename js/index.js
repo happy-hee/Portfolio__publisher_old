@@ -32,4 +32,12 @@ if (!isTouchDevice || !isMobile) {
 } else {
   // 모바일 사이즈 or 터치 가능 기기일 경우
   document.querySelector("#container").classList.add("not-pageable");
+
+  /**
+   * 스크롤 애니메이션 (AOS)
+   * https://github.com/michalsnik/aos
+   */
+  AOS.init({
+    offset: 0,
+  });
 }

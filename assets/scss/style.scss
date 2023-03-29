@@ -736,6 +736,15 @@ nav {
     transform: none;
     padding: 12rem 3rem;
   }
+
+  [data-aos="fade-in-aos"] {
+    opacity: 0;
+
+    &.aos-animate {
+      opacity: 1;
+      animation: fadeIn 0.7s ease-in-out;
+    }
+  }
 }
 @media (max-width: 767px) {
   .not-pageable .inner {
