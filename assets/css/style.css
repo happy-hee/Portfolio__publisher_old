@@ -440,6 +440,14 @@ nav ul li a span {
 
 /* 애니메이션 효과
 ========================================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes deco1 {
   0% {
     left: -425px;
@@ -482,6 +490,10 @@ nav ul li a span {
     bottom: -300px;
   }
 }
+.animated .fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
 /* 반응형
 ========================================================================== */
 @media (hover: hover) {

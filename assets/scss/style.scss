@@ -423,6 +423,15 @@ nav {
 
 /* 애니메이션 효과
 ========================================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 @keyframes deco1 {
   0% {
     left: -425px;
@@ -463,6 +472,12 @@ nav {
   100% {
     right: -400px;
     bottom: -300px;
+  }
+}
+
+.animated {
+  .fade-in {
+    animation: fadeIn 0.8s ease-in-out;
   }
 }
 
