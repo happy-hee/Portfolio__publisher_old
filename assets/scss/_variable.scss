@@ -1,13 +1,20 @@
 /* 폰트 */
-@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&display=swap");
-$font-title: "NanumSquare", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600;900&family=Montserrat:wght@600&display=swap");
+@font-face {
+  font-family: "ONE-Mobile-Title";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-title: "ONE-Mobile-Title", sans-serif;
 $font-sub-title: "Kumbh Sans", sans-serif;
 $font-content: "Noto Sans KR", sans-serif;
 
 /* Color */
-$point-color: #1e7ce1;
+$point-color: #006aea;
 
 /* Button */
 @mixin btn-default {
@@ -41,8 +48,30 @@ $point-color: #1e7ce1;
   color: #fff;
 }
 @mixin btn-point-hover {
-  background-color: #0066d3;
-  border-color: #0066d3;
+  background-color: #005ed0;
+  border-color: #005ed0;
   color: #fff;
   box-shadow: none;
+}
+@mixin bg-gradient {
+  background: -webkit-linear-gradient(
+    307deg,
+    #52a1ff 0%,
+    #3592ff 30%,
+    #0006d5 100%
+  );
+  color: #fff;
+}
+@mixin text-gradient {
+  background: -webkit-linear-gradient(
+    307deg,
+    #52a1ff 0%,
+    #3592ff 30%,
+    #0006d5 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  clip-path: inset(1px);
 }

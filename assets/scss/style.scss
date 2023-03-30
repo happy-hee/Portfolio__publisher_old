@@ -78,12 +78,14 @@ button {
   &__title {
     margin-bottom: 2rem;
     line-height: 1.8;
+    font-family: $font-title;
     font-size: 5rem;
-    font-weight: 400;
     text-align: center;
+    font-weight: normal;
     &--point {
       color: $point-color;
     }
+    @include text-gradient;
   }
 }
 .content {
@@ -192,18 +194,26 @@ nav {
 .main-visual {
   height: 100vh;
   position: relative;
-  color: #fff;
-  background-color: $point-color;
+  @include bg-gradient;
   overflow: hidden;
   &__title {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 6rem;
+    right: 6rem;
     line-height: 2;
-    font-family: $font-title;
-    font-size: 7.2rem;
-    font-weight: 600;
+    font-family: $font-sub-title;
+    font-size: 11rem;
+    font-weight: 900;
+    max-width: 130rem;
+  }
+  &__email {
+    position: absolute;
+    top: 3rem;
+    right: 2%;
+    color: #fff;
+    font-size: 1.4rem;
   }
 }
 
@@ -268,7 +278,6 @@ nav {
 /* Portfolio
 ========================================================================== */
 .portfolio {
-  background-color: #f7f7f7;
   &__content {
     padding: 6rem 0;
     display: flex;
@@ -391,7 +400,6 @@ nav {
 /* HOW TO WORK
 ========================================================================== */
 .how-work {
-  background-color: #f7f7f7;
   &__content {
     margin: 5rem 0;
   }
@@ -414,8 +422,7 @@ nav {
 ========================================================================== */
 .contact {
   height: 100vh;
-  background-color: $point-color;
-  color: #fff;
+  @include bg-gradient;
   overflow: hidden;
   &__content {
     position: absolute;
@@ -423,12 +430,13 @@ nav {
     transform: translateY(-50%);
     left: 0;
     right: 0;
-    line-height: 2;
+    line-height: 1.2;
   }
   &__text {
+    margin-bottom: 5rem;
     text-align: center;
+    font-family: $font-title;
     font-size: 6rem;
-    margin-bottom: 2rem;
     font-weight: 400;
   }
 }
@@ -489,7 +497,7 @@ nav {
 
 .animated {
   .fade-in {
-    animation: fadeIn 0.8s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
   }
 }
 
@@ -548,7 +556,7 @@ nav {
   }
   .main-visual {
     &__title {
-      font-size: 4.5rem;
+      font-size: 9.2rem;
     }
   }
   .section {
@@ -587,6 +595,7 @@ nav {
   .main-visual {
     &__title {
       left: 3rem;
+      right: 3rem;
     }
   }
   .inner {
@@ -751,6 +760,7 @@ nav {
 
   .contact {
     &__text {
+      margin-bottom: 2rem;
       font-size: 3rem;
     }
   }

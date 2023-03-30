@@ -1,8 +1,13 @@
 @charset "UTF-8";
 /* 폰트 */
-@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600;900&family=Montserrat:wght@600&display=swap");
+@font-face {
+  font-family: "ONE-Mobile-Title";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Color */
 /* Button */
 * {
@@ -83,12 +88,19 @@ button {
 .section__title {
   margin-bottom: 2rem;
   line-height: 1.8;
+  font-family: "ONE-Mobile-Title", sans-serif;
   font-size: 5rem;
-  font-weight: 400;
   text-align: center;
+  font-weight: normal;
+  background: -webkit-linear-gradient(307deg, #52a1ff 0%, #3592ff 30%, #0006d5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  clip-path: inset(1px);
 }
 .section__title--point {
-  color: #1e7ce1;
+  color: #006aea;
 }
 
 .content {
@@ -171,7 +183,7 @@ nav ul li a:focus-visible {
   border-radius: 0.7rem;
 }
 nav ul li a.active span {
-  background: #1e7ce1;
+  background: #006aea;
   position: absolute;
   height: 16px;
   width: 16px;
@@ -197,8 +209,8 @@ nav ul li a span {
 .main-visual {
   height: 100vh;
   position: relative;
+  background: -webkit-linear-gradient(307deg, #52a1ff 0%, #3592ff 30%, #0006d5 100%);
   color: #fff;
-  background-color: #1e7ce1;
   overflow: hidden;
 }
 .main-visual__title {
@@ -206,10 +218,19 @@ nav ul li a span {
   top: 50%;
   transform: translateY(-50%);
   left: 6rem;
+  right: 6rem;
   line-height: 2;
-  font-family: "NanumSquare", sans-serif;
-  font-size: 7.2rem;
-  font-weight: 600;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 11rem;
+  font-weight: 900;
+  max-width: 130rem;
+}
+.main-visual__email {
+  position: absolute;
+  top: 3rem;
+  right: 2%;
+  color: #fff;
+  font-size: 1.4rem;
 }
 
 /* About
@@ -218,7 +239,7 @@ nav ul li a span {
   display: flex;
   margin-bottom: 7rem;
   padding-left: 5rem;
-  border-left: 6px solid #1e7ce1;
+  border-left: 6px solid #006aea;
 }
 .about__intro .section__title {
   margin-bottom: 0;
@@ -268,9 +289,6 @@ nav ul li a span {
 
 /* Portfolio
 ========================================================================== */
-.portfolio {
-  background-color: #f7f7f7;
-}
 .portfolio__content {
   padding: 6rem 0;
   display: flex;
@@ -313,7 +331,7 @@ nav ul li a span {
   font-weight: 400;
   font-size: 1.6rem;
   text-decoration: underline;
-  color: #1e7ce1;
+  color: #006aea;
 }
 .portfolio__device {
   margin-bottom: 1rem;
@@ -338,8 +356,8 @@ nav ul li a span {
   transition-property: all;
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
-  border: 1px solid #1e7ce1;
-  color: #1e7ce1;
+  border: 1px solid #006aea;
+  color: #006aea;
   background-color: #fff;
 }
 .portfolio__btn:hover {
@@ -348,8 +366,8 @@ nav ul li a span {
   transition-timing-function: ease-in-out;
 }
 .portfolio__btn--point {
-  border: 1px solid #1e7ce1;
-  background-color: #1e7ce1;
+  border: 1px solid #006aea;
+  background-color: #006aea;
   color: #fff;
 }
 
@@ -407,9 +425,6 @@ nav ul li a span {
 
 /* HOW TO WORK
 ========================================================================== */
-.how-work {
-  background-color: #f7f7f7;
-}
 .how-work__content {
   margin: 5rem 0;
 }
@@ -424,14 +439,14 @@ nav ul li a span {
 }
 .how-work__list-item--point {
   margin-right: 1rem;
-  color: #1e7ce1;
+  color: #006aea;
 }
 
 /* CONTACT
 ========================================================================== */
 .contact {
   height: 100vh;
-  background-color: #1e7ce1;
+  background: -webkit-linear-gradient(307deg, #52a1ff 0%, #3592ff 30%, #0006d5 100%);
   color: #fff;
   overflow: hidden;
 }
@@ -441,12 +456,13 @@ nav ul li a span {
   transform: translateY(-50%);
   left: 0;
   right: 0;
-  line-height: 2;
+  line-height: 1.2;
 }
 .contact__text {
+  margin-bottom: 5rem;
   text-align: center;
+  font-family: "ONE-Mobile-Title", sans-serif;
   font-size: 6rem;
-  margin-bottom: 2rem;
   font-weight: 400;
 }
 
@@ -503,7 +519,7 @@ nav ul li a span {
   }
 }
 .animated .fade-in {
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 /* 반응형
@@ -515,11 +531,11 @@ nav ul li a span {
     margin: -10px 0 0 -10px;
   }
   .portfolio__btn:hover {
-    box-shadow: inset 0 0 0px 2px #1e7ce1;
+    box-shadow: inset 0 0 0px 2px #006aea;
   }
   .portfolio__btn--point:hover {
-    background-color: #0066d3;
-    border-color: #0066d3;
+    background-color: #005ed0;
+    border-color: #005ed0;
     color: #fff;
     box-shadow: none;
   }
@@ -539,7 +555,7 @@ nav ul li a span {
     right: 1.2rem;
   }
   .main-visual__title {
-    font-size: 4.5rem;
+    font-size: 9.2rem;
   }
   .section__title {
     margin-bottom: 4rem;
@@ -566,6 +582,7 @@ nav ul li a span {
   }
   .main-visual__title {
     left: 3rem;
+    right: 3rem;
   }
   .inner {
     padding: 0 3rem;
@@ -696,6 +713,7 @@ nav ul li a span {
     word-break: break-all;
   }
   .contact__text {
+    margin-bottom: 2rem;
     font-size: 3rem;
   }
 }
