@@ -53,6 +53,16 @@ $point-color: #006aea;
   color: #fff;
   box-shadow: none;
 }
+@mixin btn-transparent {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+@mixin btn-transparent-hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: $point-color;
+}
 @mixin bg-gradient {
   background: -webkit-linear-gradient(
     307deg,

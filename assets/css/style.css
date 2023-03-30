@@ -462,8 +462,41 @@ nav ul li a span {
   margin-bottom: 5rem;
   text-align: center;
   font-family: "ONE-Mobile-Title", sans-serif;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 400;
+}
+.contact__info {
+  display: flex;
+}
+.contact__info--text {
+  font-size: 3rem;
+}
+.contact__info--btn {
+  display: inline-block;
+  width: 23rem;
+  height: 5.2rem;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  width: 41rem;
+  height: auto;
+  font-size: 3.6rem;
+  font-weight: 500;
+  border-width: 3px;
+}
+.contact__info--btn:hover {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
 }
 
 /* 애니메이션 효과
@@ -548,6 +581,11 @@ nav ul li a span {
   }
   .link__list-item a:hover .link__text--title {
     text-decoration: underline;
+  }
+  .contact__info--btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #006aea;
   }
 }
 @media (max-width: 1279px) {
@@ -637,6 +675,10 @@ nav ul li a span {
   .section__title {
     font-size: 3rem;
   }
+  .main-visual__email {
+    top: 2rem;
+    right: 2rem;
+  }
   .main-visual__title {
     left: 2rem;
     right: 2rem;
@@ -683,6 +725,7 @@ nav ul li a span {
   }
   .portfolio__btn {
     width: 100%;
+    max-width: 50rem;
     margin: 1rem 0 0 0;
   }
   .portfolio .swiper-button-next:after,
@@ -712,9 +755,20 @@ nav ul li a span {
     padding: 2rem 0;
     word-break: break-all;
   }
+  .contact__content {
+    left: 2rem;
+    right: 2rem;
+  }
   .contact__text {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: 3rem;
+  }
+  .contact__info--btn {
+    width: 100%;
+    font-size: 1.8rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    max-width: 50rem;
   }
 }
 /* 터치 기기 & 모바일 사이즈 CSS
