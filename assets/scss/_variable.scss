@@ -43,5 +43,6 @@ $point-color: #1e7ce1;
 @mixin btn-point-hover {
   background-color: #0066d3;
   border-color: #0066d3;
+  color: #fff;
   box-shadow: none;
 }

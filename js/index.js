@@ -41,3 +41,17 @@ if (!isTouchDevice || !isMobile) {
     offset: 0,
   });
 }
+
+/**
+ * 포트폴리오 슬라이드 (Swiper)
+ * https://swiperjs.com/
+ */
+const portfolioSlide = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: true,
+  spped: 500,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

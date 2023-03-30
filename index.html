@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- favicon -->
     <link rel="icon" href="./assets/images/favicon.ico" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>김다희 | 웹퍼블리셔 포트폴리오</title>
   </head>
@@ -109,62 +113,134 @@
           <div class="inner">
             <h2 class="section__title">저의 최근 프로젝트를 살펴보세요!</h2>
             <div class="portfolio__content">
-              <img
-                class="portfolio__img"
-                src="./assets/images/spavel.png"
-                alt="SPAVEL" />
-              <div class="portfolio__text">
-                <div class="portfolio__device">[RESPONSIVE WEBSITE]</div>
-                <div class="portfolio__name">SPAVEL</div>
-                <div class="portfolio__info">
-                  <span>사용기술 : </span>
-                  <a
-                    class="portfolio__info--link"
-                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/index.html"
-                    target="_blank"
-                    >HTML</a
-                  >
-                  <a
-                    class="portfolio__info--link"
-                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/assets/scss/style.scss"
-                    target="_blank"
-                    >SCSS</a
-                  >
-                  <a
-                    class="portfolio__info--link"
-                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/js/script_js.js"
-                    target="_blank"
-                    >Javascript</a
-                  >
-                  <a
-                    class="portfolio__info--link"
-                    href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/js/script_jquery.js"
-                    target="_blank"
-                    >jQuery</a
-                  >
+              <div class="swiper portfolio__slide-wrap">
+                <div class="swiper-wrapper portfolio__slide">
+                  <!-- 슬라이드 -->
+                  <!-- SPAVEL -->
+                  <div class="swiper-slide portfolio__slide-item">
+                    <div class="portfolio__img-wrap">
+                      <img
+                        class="portfolio__img"
+                        src="./assets/images/spavel.png"
+                        alt="SPAVEL" />
+                    </div>
+                    <div class="portfolio__text">
+                      <div class="portfolio__device">[RESPONSIVE WEBSITE]</div>
+                      <div class="portfolio__name">SPAVEL</div>
+                      <div class="portfolio__info">
+                        <span>사용기술 : </span>
+                        <a
+                          class="portfolio__info--link"
+                          href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/index.html"
+                          target="_blank"
+                          >HTML</a
+                        >
+                        <a
+                          class="portfolio__info--link"
+                          href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/assets/scss/style.scss"
+                          target="_blank"
+                          >SCSS</a
+                        >
+                        <a
+                          class="portfolio__info--link"
+                          href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/js/script_js.js"
+                          target="_blank"
+                          >Javascript</a
+                        >
+                        <a
+                          class="portfolio__info--link"
+                          href="https://github.com/happy-hee/Portfolio__Spavel/blob/main/js/script_jquery.js"
+                          target="_blank"
+                          >jQuery</a
+                        >
+                      </div>
+                      <div class="portfolio__info">
+                        - 기여도 : 퍼블리싱 및 디자인 100%
+                      </div>
+                      <div class="portfolio__info">
+                        - 아코디언 메뉴, 탭메뉴, 스크롤스파이 하드코딩
+                      </div>
+                      <div class="portfolio__info">
+                        - Swiper / Date picker / AOS 플러그인 사용
+                      </div>
+                      <div class="portfolio__btn-wrap">
+                        <a
+                          class="portfolio__btn"
+                          href="https://mica-arch-602.notion.site/SPAVEL-1f984ada945b495d9003913965c60df4"
+                          target="_blank"
+                          >자세히보기</a
+                        >
+                        <a
+                          class="portfolio__btn portfolio__btn--point"
+                          href="https://happy-hee.github.io/Portfolio__Spavel/"
+                          target="_blank">
+                          사이트 보러가기
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- HAPPY COSMETIC -->
+                  <div class="swiper-slide portfolio__slide-item">
+                    <div class="portfolio__img-wrap">
+                      <img
+                        class="portfolio__img"
+                        src="./assets/images/cosmetic.png"
+                        alt="HAPPY COSMETIC" />
+                    </div>
+                    <div class="portfolio__text">
+                      <div class="portfolio__device">[MOBILE WEBSITE]</div>
+                      <div class="portfolio__name">HAPPY COSMETIC</div>
+                      <div class="portfolio__info">
+                        <span>사용기술 : </span>
+                        <a
+                          class="portfolio__info--link"
+                          href="https://github.com/happy-hee/Portfolio__HappyCosmetic/blob/main/index.html"
+                          target="_blank"
+                          >HTML</a
+                        >
+                        <a
+                          class="portfolio__info--link"
+                          href="https://github.com/happy-hee/Portfolio__HappyCosmetic/blob/main/assets/scss/main.scss"
+                          target="_blank"
+                          >SCSS</a
+                        >
+                        <a
+                          class="portfolio__info--link"
+                          href="https://github.com/happy-hee/Portfolio__HappyCosmetic/blob/main/js/index.js"
+                          target="_blank"
+                          >Javascript</a
+                        >
+                      </div>
+                      <div class="portfolio__info">
+                        - 기여도 : 퍼블리싱 및 디자인 100%
+                      </div>
+                      <div class="portfolio__info">- 탭메뉴 하드코딩</div>
+                      <div class="portfolio__info">- Swiper 플러그인 사용</div>
+                      <div class="portfolio__btn-wrap">
+                        <a
+                          class="portfolio__btn"
+                          href="https://mica-arch-602.notion.site/SPAVEL-1f984ada945b495d9003913965c60df4"
+                          target="_blank"
+                          >자세히보기</a
+                        >
+                        <a
+                          class="portfolio__btn portfolio__btn--point"
+                          href="https://happy-hee.github.io/Portfolio__Spavel/"
+                          target="_blank">
+                          사이트 보러가기
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="portfolio__info">
-                  기여도 : 퍼블리싱 및 디자인 100%
-                </div>
-                <div class="portfolio__info">
-                  사용 플러그인 : Swiper / Date picker / AOS
-                </div>
-                <div class="portfolio__btn-wrap">
-                  <a
-                    class="portfolio__btn"
-                    href="https://mica-arch-602.notion.site/SPAVEL-1f984ada945b495d9003913965c60df4"
-                    target="_blank"
-                    >자세히보기</a
-                  >
-                  <a
-                    class="portfolio__btn portfolio__btn--point"
-                    href="https://happy-hee.github.io/Portfolio__Spavel/"
-                    target="_blank">
-                    사이트 보러가기
-                  </a>
-                </div>
+
+                <!-- 슬라이드 네비게이션 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
               </div>
             </div>
+
+            <div class="portfolio__content" style="display: none"></div>
           </div>
         </div>
       </section>
@@ -177,17 +253,6 @@
             <div class="link__content">
               <ul class="link__list">
                 <!-- 모바일 사이트 -->
-                <li class="link__list-item">
-                  <a
-                    href="https://happy-hee.github.io/Portfolio__HappyCosmetic/"
-                    target="_blank">
-                    <div class="link__img link__img--cosmetic"></div>
-                    <div class="link__text">
-                      <div class="link__text--title">Happy Cosmetic</div>
-                      <p>모바일 사이즈 기반 포트폴리오 작업</p>
-                    </div>
-                  </a>
-                </li>
                 <li class="link__list-item">
                   <a href="https://happy-hee8.tistory.com/" target="_blank">
                     <div class="link__img link__img--blog"></div>
@@ -271,6 +336,9 @@
     <script src="./js/pageable.js"></script>
     <!-- AOS 스크립트 -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="./js/index.js"></script>
   </body>
 </html>

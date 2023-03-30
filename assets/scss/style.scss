@@ -275,10 +275,22 @@ nav {
     align-items: center;
     text-align: center;
   }
-  &__img {
-    width: 50%;
-    max-width: 90rem;
+  &__slide-wrap {
+    width: 100%;
+  }
+  &__slide-item {
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+  }
+  &__img-wrap {
     margin: 0 auto;
+    width: 50%;
+    max-width: 60rem;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
   }
   &__text {
     width: 50%;
@@ -295,19 +307,17 @@ nav {
     margin-bottom: 2rem;
     &--link {
       padding: 0.4rem 1rem;
-      margin: 0 0.2rem;
-      background-color: #137ef10f;
-      color: #1e7ce1;
-      border-radius: 0.5rem;
       font-weight: 400;
       font-size: 1.6rem;
+      text-decoration: underline;
+      color: $point-color;
     }
   }
   &__device {
     margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: 500;
-    color: $point-color;
+    color: #888;
   }
   &__btn-wrap {
     display: flex;
@@ -333,12 +343,14 @@ nav {
   &__list {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 0 -3rem;
   }
   &__list-item {
     flex: 1;
     padding: 0 3rem;
+    max-width: 50rem;
     border-radius: 0.5rem;
     background-color: #fff;
     a {
@@ -506,6 +518,13 @@ nav {
         }
       }
     }
+    &__info {
+      &--link {
+        &:hover {
+          color: #ff8e00;
+        }
+      }
+    }
   }
   .link {
     &__list-item {
@@ -589,12 +608,13 @@ nav {
   }
   .portfolio {
     &__content {
-      flex-direction: column;
       padding: 3rem 0 0 0;
     }
-    &__img {
+    &__slide-item {
+      flex-direction: column;
+    }
+    &__img-wrap {
       width: 100%;
-      max-width: 60rem;
     }
     &__text {
       width: 100%;
@@ -683,7 +703,6 @@ nav {
       font-size: 1.4rem;
       &--link {
         padding: 0.3rem 0.6rem;
-        margin: 0 0.1rem;
         font-size: 1.3rem;
       }
     }
@@ -694,6 +713,16 @@ nav {
     &__btn {
       width: 100%;
       margin: 1rem 0 0 0;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 3rem;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev {
+      left: 0;
     }
   }
 

@@ -277,10 +277,22 @@ nav ul li a span {
   align-items: center;
   text-align: center;
 }
-.portfolio__img {
-  width: 50%;
-  max-width: 90rem;
+.portfolio__slide-wrap {
+  width: 100%;
+}
+.portfolio__slide-item {
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+}
+.portfolio__img-wrap {
   margin: 0 auto;
+  width: 50%;
+  max-width: 60rem;
+}
+.portfolio__img {
+  width: 100%;
+  height: auto;
 }
 .portfolio__text {
   width: 50%;
@@ -298,18 +310,16 @@ nav ul li a span {
 }
 .portfolio__info--link {
   padding: 0.4rem 1rem;
-  margin: 0 0.2rem;
-  background-color: rgba(19, 126, 241, 0.0588235294);
-  color: #1e7ce1;
-  border-radius: 0.5rem;
   font-weight: 400;
   font-size: 1.6rem;
+  text-decoration: underline;
+  color: #1e7ce1;
 }
 .portfolio__device {
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 500;
-  color: #1e7ce1;
+  color: #888;
 }
 .portfolio__btn-wrap {
   display: flex;
@@ -351,12 +361,14 @@ nav ul li a span {
 .link__list {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 -3rem;
 }
 .link__list-item {
   flex: 1;
   padding: 0 3rem;
+  max-width: 50rem;
   border-radius: 0.5rem;
   background-color: #fff;
 }
@@ -508,7 +520,11 @@ nav ul li a span {
   .portfolio__btn--point:hover {
     background-color: #0066d3;
     border-color: #0066d3;
+    color: #fff;
     box-shadow: none;
+  }
+  .portfolio__info--link:hover {
+    color: #ff8e00;
   }
   .link__list-item a:hover {
     box-shadow: -1px 7px 14px 4px rgba(0, 0, 0, 0.14);
@@ -563,12 +579,13 @@ nav ul li a span {
     margin-bottom: 6rem;
   }
   .portfolio__content {
-    flex-direction: column;
     padding: 3rem 0 0 0;
   }
-  .portfolio__img {
+  .portfolio__slide-item {
+    flex-direction: column;
+  }
+  .portfolio__img-wrap {
     width: 100%;
-    max-width: 60rem;
   }
   .portfolio__text {
     width: 100%;
@@ -641,7 +658,6 @@ nav ul li a span {
   }
   .portfolio__info--link {
     padding: 0.3rem 0.6rem;
-    margin: 0 0.1rem;
     font-size: 1.3rem;
   }
   .portfolio__btn-wrap {
@@ -651,6 +667,16 @@ nav ul li a span {
   .portfolio__btn {
     width: 100%;
     margin: 1rem 0 0 0;
+  }
+  .portfolio .swiper-button-next:after,
+  .portfolio .swiper-button-prev:after {
+    font-size: 3rem;
+  }
+  .portfolio .swiper-button-next {
+    right: 0;
+  }
+  .portfolio .swiper-button-prev {
+    left: 0;
   }
   .link__list-item {
     flex: 0 0 100%;
