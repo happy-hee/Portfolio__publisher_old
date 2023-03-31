@@ -660,6 +660,9 @@ nav ul li a span {
     margin-top: 5rem;
     justify-content: center;
   }
+  .portfolio__btn {
+    max-width: 50rem;
+  }
   .link__content {
     margin: 4rem 0 0 0;
   }
@@ -718,6 +721,9 @@ nav ul li a span {
   .portfolio__device {
     font-size: 1.4rem;
   }
+  .portfolio__text {
+    padding: 2rem 3rem 0 3rem;
+  }
   .portfolio__name {
     font-size: 2.8rem;
   }
@@ -728,13 +734,18 @@ nav ul li a span {
     padding: 0.3rem 0.6rem;
     font-size: 1.3rem;
   }
+  .portfolio__slide-item {
+    padding: 0;
+  }
   .portfolio__btn-wrap {
     margin-top: 4rem;
     flex-wrap: wrap;
   }
+  .portfolio__btn-wrap {
+    width: 100%;
+  }
   .portfolio__btn {
     width: 100%;
-    max-width: 50rem;
     margin: 1rem 0 0 0;
   }
   .portfolio .swiper-button-next:after,

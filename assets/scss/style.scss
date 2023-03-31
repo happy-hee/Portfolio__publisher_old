@@ -656,6 +656,9 @@ nav {
       margin-top: 5rem;
       justify-content: center;
     }
+    &__btn {
+      max-width: 50rem;
+    }
   }
   .link {
     &__content {
@@ -731,6 +734,9 @@ nav {
     &__device {
       font-size: 1.4rem;
     }
+    &__text {
+      padding: 2rem 3rem 0 3rem;
+    }
     &__name {
       font-size: 2.8rem;
     }
@@ -741,13 +747,18 @@ nav {
         font-size: 1.3rem;
       }
     }
+    &__slide-item {
+      padding: 0;
+    }
     &__btn-wrap {
       margin-top: 4rem;
       flex-wrap: wrap;
     }
+    &__btn-wrap {
+      width: 100%;
+    }
     &__btn {
       width: 100%;
-      max-width: 50rem;
       margin: 1rem 0 0 0;
     }
     .swiper-button-next:after,
