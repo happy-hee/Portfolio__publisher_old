@@ -222,7 +222,7 @@ nav {
 .about {
   &__intro {
     display: flex;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     padding-left: 5rem;
     border-left: 6px solid $point-color;
     .section__title {
@@ -239,7 +239,7 @@ nav {
       }
       &__title {
         position: relative;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         font-family: $font-sub-title;
         font-size: 2.7rem;
         &::after {

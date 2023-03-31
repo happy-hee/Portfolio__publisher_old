@@ -243,7 +243,7 @@ nav ul li a span {
 ========================================================================== */
 .about__intro {
   display: flex;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
   padding-left: 5rem;
   border-left: 6px solid #006aea;
 }
@@ -262,7 +262,7 @@ nav ul li a span {
 }
 .about__content .skill__title {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 2.7rem;
 }
