@@ -414,6 +414,7 @@ nav ul li a span {
   height: 25rem;
   background-repeat: no-repeat;
   background-position: center;
+  border-bottom: 1px solid #eaeaea;
 }
 .link__img--cosmetic {
   background-image: url("../images/cosmetic_logo.png");
@@ -427,6 +428,11 @@ nav ul li a span {
 .link__img--github {
   background-image: url("../images/icon_github.png");
   background-color: #201f27;
+}
+.link__img--diary {
+  background-image: url("../images/diary_thumbnail.png");
+  background-color: #fff;
+  background-size: contain;
 }
 
 /* HOW TO WORK
